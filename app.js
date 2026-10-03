@@ -1,20 +1,13 @@
 
 const express = require('express');
 const app = express();
+const adminRoutes = require('./Routes/admin');
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/add-product', (req, res, next)=>{
-   // console.log("in the middleware"); 
-    res.send('<form action="/product" method="post"><input type="text" name="product" placeholder="Product Name"><button type="submit">Add Product</button></form>');
-     //it allow the request to continue to the next middleware
-});
+app.use(adminRoutes);
 
-app.post('/product', (req, res, next)=>{
-    console.log(req.body); 
-    res.redirect('/');
-});
 
 app.use('/', (req, res, next)=>{
     // console.log("in the middleware"); 
