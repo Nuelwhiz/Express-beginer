@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #333;
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+/* Header Styles */
+.main-header {
+    width: 100%;
+    height: 4rem;
+    background-color: #dbc441;
+    padding: 0 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-header__nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-header__item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-header__item {
+    margin: 0 1rem;
+    padding: 0;
+}
+
+.main-header__item a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active {
+    color: #3e00a1;
+    background-color: rgba(62, 0, 161, 0.08);
+}
+
+.main-header__item a:focus {
+    outline: none;
+    color: #3e00a1;
+    background-color: rgba(62, 0, 161, 0.15);
+    box-shadow: 0 0 0 2px #3e00a1;
+}
+
+/* Product Form Styles */
+.product-form {
+    width: 24rem;
+    max-width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.form-control {
+    margin-bottom: 1.25rem;
+}
+
+.form-control label {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.form-control input {
+    display: block;
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #cbd5e1;
+    font: inherit;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control input:focus {
+    outline: none;
+    border-color: #3e00a1;
+    box-shadow: 0 0 0 3px rgba(62, 0, 161, 0.15);
+}
+
+/* Button Styles */
+button {
+    font: inherit;
+    font-weight: 500;
+    border: 1px solid #3e00a1;
+    color: #3e00a1;
+    background: white;
+    padding: 0.65rem 1.25rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s;
+}
+
+button:hover,
+button:active {
+    background-color: #3e00a1;
+    color: white;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(62, 0, 161, 0.25);
+}
