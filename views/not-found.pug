@@ -3,22 +3,20 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title #{pageTitle}
+        title #{notFoundTitle}
         link(rel="stylesheet", href="/css/main.css")
         link(rel="stylesheet", href="/css/product.css")
-        link(rel="stylesheet", href="/css/form.css")
+
     body 
         header.main-header
             nav.main-header__nav
                 ul.main-header__item-list
                     li.main-header__item
-                        a(href="/") Shop
+                        a.active(href="/") Shop
                     li.main-header__item
-                        a.active(href="/admin/add-product") Add Product
-
+                        a(href="/add-product") Add Product
+            
         main
-            form.product-form(action="/admin/product", method="POST")
-                .form-control
-                    label(for="title") Title
-                    input(type="text", name="title")#title
-                button(type="submit") Add Product
+            h1 Page Not Found!
+            p The page you are looking for does not exist.
+            a(href="/") Go back to the shop
