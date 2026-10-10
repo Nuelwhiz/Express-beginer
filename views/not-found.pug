@@ -1,22 +1,7 @@
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title #{notFoundTitle}
-        link(rel="stylesheet", href="/css/main.css")
-        link(rel="stylesheet", href="/css/product.css")
+extend layout/page-layout
 
-    body 
-        header.main-header
-            nav.main-header__nav
-                ul.main-header__item-list
-                    li.main-header__item
-                        a.active(href="/") Shop
-                    li.main-header__item
-                        a(href="/add-product") Add Product
-            
-        main
+block content
+     main
             h1 Page Not Found!
             p The page you are looking for does not exist.
             a(href="/") Go back to the shop
