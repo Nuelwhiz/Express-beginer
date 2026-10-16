@@ -1,5 +1,5 @@
 
-    const products = [];
+    const Product = require('../models/product')
 
 exports.addProduct = (req, res, next)=>{
     res.render('add-product', 
@@ -13,14 +13,14 @@ exports.addProduct = (req, res, next)=>{
         );
 }
 
-exports.postAddProduct = (req, res, next)=>{
-   // console.log(req.body); 
-   products.push({title: req.body.title});
+exports.postAddProduct = (req, res, next)=>{ 
+const product = new Product(req.body.title)
+product.save();
     res.redirect('/');
 }
 
 exports.getProducts = (req, res, next)=>{
-    //const products = adminRoutes.products;
+    const products = Product.fetchAll()
     res.render('shop', 
         {
              prods: products,
@@ -31,7 +31,5 @@ exports.getProducts = (req, res, next)=>{
                   activeShop: true
             }
     );
-    // console.log("in the middleware"); 
-    //console.log(adminRoutes.products);
-   // res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+   
 }
