@@ -60,8 +60,6 @@ main {
 
 .card {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  border-radius: 10px;
-  cursor: pointer;
 }
 
 .card__header,
@@ -108,11 +106,3 @@ main {
   background-color: #00695c;
   color: white;
 }
-
-main {
-            text-align: center;
-        }
-        a {
-            text-decoration: none;
-            color: #3e00a1;
-        }
