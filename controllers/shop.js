@@ -17,6 +17,16 @@ res.render('shop/product-list',
    
 }
 
+
+exports.getProduct = (req, res, next) => {
+    const prodId = req.params.productId;
+    console.log(prodId);
+    
+    // Use res.redirect instead of redirect
+    res.redirect('/');
+};
+
+
 exports.getIndex = (req, res, next)=>{
    Product.fetchAll((products) =>{
 res.render('shop/index', {
