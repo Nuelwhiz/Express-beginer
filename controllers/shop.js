@@ -17,13 +17,18 @@ res.render('shop/product-list',
    
 }
 
-
+//getting product by id
 exports.getProduct = (req, res, next) => {
     const prodId = req.params.productId;
-    console.log(prodId);
+    Product.findId(prodId, product =>{
+    res.render('shop/product-detail', {
+        product: product,
+        pageTitle: product.title,
+        path: '/products'
+    });
+     
+    })
     
-    // Use res.redirect instead of redirect
-    res.redirect('/');
 };
 
 
@@ -37,7 +42,7 @@ res.render('shop/index', {
     );
     }) 
 }
-
+//
 
 exports.getCart = (req, res, next) =>{
     res.render(
