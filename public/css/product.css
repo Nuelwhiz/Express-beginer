@@ -1,25 +1,69 @@
+
+/* Product Form */
+
 .product-form {
-    width: 20rem;
-    max-width: 90%;
-    margin: auto;
+  width: 100%;
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
+
+/* Product Items */
 
 .product-item {
-    width: 20rem;
-    max-width: 95%;
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
 }
+
+/* Product Title */
 
 .product__title {
-    font-size: 1.2rem;
-    text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+  color: #1f2937;
 }
+
+/* Product Price */
 
 .product__price {
-    text-align: center;
-    color: #4d4d4d;
-    margin-bottom: 0.5rem;
+  text-align: center;
+  color: #00695c;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
 }
 
+/* Product Description */
+
 .product__description {
-    text-align: center;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 600px) {
+  .product-form {
+    max-width: 100%;
+    padding: 1.25rem;
+    margin: 1rem auto;
+  }
+
+  .product-item {
+    max-width: 100%;
+  }
 }
