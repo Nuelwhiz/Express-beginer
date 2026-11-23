@@ -55,8 +55,23 @@ exports.getEditProduct = (req, res, next) => {
 //post edit product
 exports.postEditProduct = (req, res, next) => {
 const productId = req.body.productId;
+const updatedTitle = req.body.title;
+const updatedImageUrl = req.body.imageUrl;
+const updatedDescription = req.body.description;
+const updatedPrice = req.body.price;
 
+const updatedProduct = new Product(
+    productId,
+    updatedTitle,
+    updatedImageUrl,
+    updatedDescription,
+    updatedPrice
+);
+
+updatedProduct.save();
+res.redirect('/admin/products');
 }
+
 exports.getProduct = (req, res, next) => {
     Product.fetchAll((products) => {
         res.render('admin/products', {
