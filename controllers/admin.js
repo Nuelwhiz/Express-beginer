@@ -17,6 +17,7 @@ exports.postAddProduct = (req, res, next) => {
     const price = req.body.price;
 
     const product = new Product(
+        null,
         title,
         imageUrl,
         description,
@@ -51,6 +52,11 @@ exports.getEditProduct = (req, res, next) => {
     });
 };
 
+//post edit product
+exports.postEditProduct = (req, res, next) => {
+const productId = req.body.productId;
+
+}
 exports.getProduct = (req, res, next) => {
     Product.fetchAll((products) => {
         res.render('admin/products', {
