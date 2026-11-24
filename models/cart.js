@@ -52,7 +52,8 @@ module.exports = class Cart {
       if (err) {
         return;
       }
-      const updatedCart = { ...cart};
+      const cart = JSON.parse(fileContent);
+      const updatedCart = { ...cart };
       const productIndex = updatedCart.products.findIndex(prod => prod.id === id);
       if (productIndex >= 0) {
         const product = updatedCart.products[productIndex];
